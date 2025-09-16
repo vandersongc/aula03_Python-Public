@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Input
+var n1 = parseInt(prompt("Escolha o 1º número."))
+var n2 = parseInt(prompt("Escolha o 2º número."))
+
+alert("Escolha uma opção aritmética.\n"+
+"+ Soma\n"+
+"- Subtração\n"+
+"x Multiplicação\n"+
+": Divisão\n"+
+"md Média")
+
+/*
+"1 - Soma\n"+
+"2 - Subtração\n"+
+"3 - Multiplicação\n"+
+"4 - Divisão\n"+
+"5 - Média")
+*/
+
+var op = prompt("Escolha uma opção.")
+
+//Output
+document.write("Cálculo</p>")
+document.write("1º Número: "+n1+"</p>")
+document.write("2º Número: "+n2+"</p>")
+
+switch (op) {
+
+    case "+":
+        document.write("Soma: "+(n1+n2))
+        break;
+
+    case "-":
+        document.write("Subtração: "+(n1-n2))
+        break;
+
+    case "x":
+        document.write("Multiplicação :"+(n1*n2))
+        break;
+
+    case ":":
+        document.write("Divisão :"+(n1/n2))
+        break;
+
+    case "md":
+        document.write("Média :"+(n1+n2)/2)    
+        break;
+
+    default:
+
+        document.write("Opção Inválida.")
+
+        break;
+}
+
+    </script>
+</body>
+</html>

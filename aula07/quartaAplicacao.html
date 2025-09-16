@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/script.js"></script>
+
+    <h1>Folha de Pagamento</h1>
+    <form action="">
+
+        <p>
+            <label for="">Nome:</label>
+            <input type="text" id="nome">
+        </p>
+
+        <p>
+            <label for="">Salário Bruto:</label>
+            <input type="text" id="salarioBruto">
+        </p>
+
+        <p>
+            <label for="">INSS:</label>
+            <input type="text" id="inss" readonly>
+        </p>
+
+        <p>
+            <label for="">Vale Transporte:</label>
+            <input type="text" id="vale" readonly>
+        </p>
+
+        <p>
+            <label for="">Cargo:</label>
+            <input type="text" id="cargo" readonly>
+        </p>
+
+        <p>
+            <label for="">Salário Líquido:</label>
+            <input type="text" id="salarioLiquido" readonly>
+        </p>
+
+        <p>
+            <button type="button"onclick="exibirSalario()">Calcular:</button>
+            <button type="reset"> Limpar</button>
+        </p>
+
+    </form>
+
+
+
+</body>
+</html>

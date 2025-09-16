@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.write("<p>Teste sua idade</p>")
+
+        for (var i = 1; i <= 3; i++) {
+        
+        var nome = prompt(i+"º Nome:")    
+        var idade = parseInt(prompt(i+"ª Idade"))
+       
+        if (idade>=18) {
+            document.write("<p>"+i+"º Nome - "+nome+" tem "+idade+" anos e é maior.</p>")
+        } else {
+            document.write("<p>"+i+"º Nome - "+nome+" tem "+idade+" anos e é menor.</p>")
+        }
+
+
+        }
+        
+
+    </script>
+
+</body>
+</html>

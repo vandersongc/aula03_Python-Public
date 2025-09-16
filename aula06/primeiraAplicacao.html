@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.write("<p>Análise em looping.</p>")
+
+        var num1 = parseInt(prompt("Valor 1:"))
+        var num2 = parseInt(prompt("Valor 2:"))
+        var resp = "sim"
+
+        while (resp == "sim") {
+            var op = prompt("Escolha a operação:")
+            switch (op) {
+                case "+":
+
+                    alert(num1+num2)
+                    document.write("<p>"+(num1+num2)+"</p>")
+
+                        break;
+                case "-":    
+
+                    alert(num1-num2)
+                    document.write("<p>"+(num1-num2)+"</p>")
+
+                    break;
+                case "x":    
+
+                    alert(num1+num2)
+                    document.write("<p>"+(num1*num2)+"</p>")
+
+                        break;
+                case ":":    
+
+                    alert(num1/num2)
+                    document.write("<p>"+(num1/num2)+"</p>")
+
+                        break;
+                            
+                default:
+
+                    alert("Opção inválida")
+
+                    break;
+            }
+
+            resp = prompt("Deseja continuar? sim ou não")
+        }
+
+
+    </script>
+</body>
+</html>

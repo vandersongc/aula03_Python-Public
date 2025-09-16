@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        //Input
+        var nome = (prompt("Escreva o nome do funcionário(a)."))
+        var salariobruto = parseFloat(prompt("Escreva o salário bruto."))
+
+        alert("Escolha uma opção:\n"+ 
+        "1 - INSS \n"+
+        "2 - Vale Transporte\n"+
+        "3 - Bônus\n"+
+        "4 - Cargo")
+
+        var op =  parseInt(prompt("Escolha uma opção: "))
+
+        switch (op) {
+            case 1:
+            var inss
+        if (salariobruto>=3000) {
+            inss = salariobruto*0.11
+        } else if (salariobruto>=2000){
+            inss = salariobruto*0.09
+        } else{
+            inss = salariobruto*0.08
+        }
+
+            document.write("INSS: -"+inss)
+
+
+                break;
+            
+            case 2:
+
+            var valetransp
+        if (salariobruto>=1500) {
+            valetransp = salariobruto*0.06
+        } else {
+            valetransp = salariobruto*0.05
+        }
+
+        document.write("Vale Transporte: -"+valetransp)
+                
+                break;
+
+                case 3:
+               
+               var bonus
+           if (salariobruto>=3000) {
+               bonus = 500
+               } else if (salariobruto>=2000) {
+               bonus = 300
+           } else {
+               bonus = 200
+        
+           }
+               document.write("Bônus: +"+bonus)
+
+               break;
+
+                case 4:
+
+                var bonus
+        if (salariobruto>=3000) {
+            bonus = 500
+            } else if (salariobruto>=2000) {
+            bonus = 300
+        } else {
+            bonus = 200
+        }
+
+            document.write("Bônus: +"+bonus)
+
+            break;
+
+            case 5:
+
+                var cargo
+        if (salariobruto>=3000) {
+            cargo = "Acionista"
+        } else if (salariobruto>=2000) {
+            cargo = "Gerente"
+        } else {
+            cargo = "Vendedor"
+        }
+
+            document.write("Cargo: "+cargo)
+
+            break;
+
+            default:
+
+            document.write("Opção Inválida")
+
+                break;
+        }
+   
+        /*
+        Processamento
+
+        var salarioliq
+        salarioliq = salariobruto + bonus - inss - valetransp
+
+
+        //Output
+        document.write("Contracheque</p>")
+        document.write("Nome: "+nome+"</p>")
+        document.write(" . Salário Bruto: "+salariobruto.toFixed(2)+"</p>")
+        document.write("+ Bônus: "+bonus+"</p>")
+        document.write("- INSS: "+inss.toFixed(2)+"</p>")
+        document.write("- Vale Transporte: "+valetransp.toFixed(2)+"</p>")
+        document.write("= Salário Líquido: "+salarioliq.toFixed(2)+"</p>")
+        document.write("Cargo: "+cargo)
+ 
+        */
+            </script>
+</body>
+</html>

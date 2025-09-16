@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        i=1
+
+        while (i<=3) {
+            
+    
+        var nome = prompt(i+"º Nome: ")
+        var salbrut = parseFloat(prompt("Salário Bruto: "))
+        var cpf = prompt("CPF: ")
+
+         alert("Escolha uma opção:\n"+
+         "1- INSS\n"+
+         "2 - Vale Transporte\n"+
+         "3 - Cargo\n"+
+         "4 - Salário Líquido")   
+
+        var op = parseInt(prompt("Escolha uma opção:"))
+        
+        switch (op) {
+
+            case 1:
+                
+            var inss
+
+            if (salbrut>=1897.12) {
+            inss = parseFloat(salbrut*0.11.toFixed(2))
+
+            } else if (salbrut<1897.12 && salbrut>=1500) {
+            inss = parseFloat(salbrut*0.09.toFixed(2))
+
+            } else {    
+            inss = parseFloat(salbrut*0.08.toFixed(2))
+            }
+
+            document.write("<p>Nome: "+nome+"</p>")
+            document.write("<p>Salário Bruto: "+salbrut+"</p>")
+            document.write("<p>CPF: "+cpf+"</p>")
+            document.write("<p>INSS: "+inss+"</p>")
+
+                break;
+
+            case 2:
+
+            var vt
+
+            if (salbrut>=1500) {
+            vt = parseFloat(salbrut*0.06.toFixed(2))
+
+            } else {    
+            vt = parseFloat(salbrut*0.05.toFixed(2))
+            }
+
+            document.write("<p>Nome: "+nome+"</p>")
+            document.write("<p>Salário Bruto: "+salbrut+"</p>")
+            document.write("<p>CPF: "+cpf+"</p>")
+            document.write("<p>Vale Transporte: "+vt+"</p>")
+
+                break;
+
+            case 3:
+
+            var cargo
+
+            if (salbrut>=1897.12) {
+            cargo = ("<p>Acionista</p>")
+
+            } else if (salbrut<1897.12 && salbrut>=1500) {
+            cargo = ("<p>Gerente</p>")
+
+            } else {    
+            cargo = ("<p>Vendedor</p>")
+            }    
+
+            document.write("<p>Nome: "+nome+"</p>")
+            document.write("<p>Salário Bruto: "+salbrut+"</p>")
+            document.write("<p>CPF: "+cpf+"</p>")
+            document.write("<p>Cargo: "+cargo+"</p>")
+        
+            break;
+
+            case 4:
+
+            var salliq = parseFloat(salbrut-(inss+vt))
+
+            document.write("<p>Nome: "+nome+"</p>")
+            document.write("<p>Salário Bruto: "+salbrut+"</p>")
+            document.write("<p>CPF: "+cpf+"</p>")
+            document.write("<p>Salário Líquido: "+salliq+"</p>")
+
+            break;
+
+            default:
+
+            document.write("Opção Inválida")
+                break;
+        }
+        
+        
+        i++
+    }
+
+
+    </script>
+
+</body>
+</html>
