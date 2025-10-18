@@ -28,26 +28,26 @@ level = 0
 
 while True:
 
-    level_escolhido = int(input('Escolha o level do game:\n1- Fácil\n2- Médio\n3- Difícil\nDigite sua escolha: '))
+    level_escolhido = int(input('\nEscolha o level do game:\n1- Fácil\n2- Médio\n3- Difícil\nDigite sua escolha: '))
 
     if level_escolhido == 1:
-        level = 5 #30
+        level = 30
         break        
     elif level_escolhido == 2:
-        level = 4 #15
+        level = 15
         break        
     elif level_escolhido == 3:
-        level = 3 #5
+        level = 5
         break       
     else:
-        print("\nOpção inválida! Por favor, escolha um dos números disponíveis.\n")
+        print("\nOpção inválida! Por favor, escolha um dos números disponíveis.")
         
 
 while contador <= level:
-    numero_escolhido = int(input('Digite o numero secreto: '))
+    numero_escolhido = int(input('\nDigite o numero secreto: '))
 
     if numero_escolhido == numero_secreto:
-        print('Parabéns você acertou!')
+        print('Parabéns você acertou!\n')
         break
                             
     else:
@@ -57,5 +57,5 @@ while contador <= level:
 
     if contador == level:
         contador += 1
-        print('Você excedeu o limite de tentativas. Game Over!')
+        print('\nVocê excedeu o limite de tentativas. Game Over!\n')
         break
