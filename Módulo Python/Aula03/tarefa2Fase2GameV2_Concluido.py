@@ -51,9 +51,11 @@ while contador <= level:
         break
                             
     else:
-        print(f'Você errou, tente novamente! Tentativa {contador} de {level}.')
         contador += 1
+        print(f'Você errou, tente novamente! Tentativa {contador} de {level}.')
+        
 
-    if contador == level_escolhido:
+    if contador == level:
+        contador += 1
         print('Você excedeu o limite de tentativas. Game Over!')
         break
