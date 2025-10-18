@@ -15,6 +15,8 @@ Anexar o código com as melhorias da fase 3 aqui
 '''
 import random
 numero_secreto = random.randint(10,100)
+min = 10
+max = 100
 contador = 0
 level = 0
 
@@ -36,14 +38,19 @@ while True:
         
 
 while contador <= level:
-    numero_escolhido = int(input('Digite o numero secreto: '))
+    numero_escolhido = int(input('Digite o numero secreto entre 10 e 100: '))
 
     if numero_secreto == numero_escolhido:
         print('Parabéns você acertou!')
         break
                             
     else:
-        print(f'Você errou, tente novamente! Tentativa {contador} de {level}.')
+        if numero_escolhido < min or numero_escolhido > max:
+            print(f'Você escolheu um númeto fora do intervalo de 10 a 100! Tentativa {contador} de {level}.')
+            
+        else:
+            print(f'Você errou, tente novamente! Tentativa {contador} de {level}.')
+        
         contador += 1
 
     if contador == level_escolhido:
