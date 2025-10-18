@@ -49,10 +49,12 @@ while contador <= level:
             print(f'Você escolheu um númeto fora do intervalo de 10 a 100! Tentativa {contador} de {level}.')
             
         else:
+            contador += 1
             print(f'Você errou, tente novamente! Tentativa {contador} de {level}.')
         
-        contador += 1
+        
 
-    if contador == level_escolhido:
+    if contador == level:
+        contador += 1
         print('Você excedeu o limite de tentativas. Game Over!')
         break
