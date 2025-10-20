@@ -1,4 +1,4 @@
-numero_secreto = 8
+numero_secreto = 7
 
 while True:
         
