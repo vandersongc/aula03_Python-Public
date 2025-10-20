@@ -1,16 +1,25 @@
 '''
 História:
 
-A empresa AWXS é um novo cliente da JWC, uma empresa especializada em desenvolvimento de soluções personalizadas. Após o sucesso da primeira fase do jogo "Número Secreto" durante a Aula 01 e aula 02, a JWC está em fase probatória para demonstrar sua competência no desenvolvimento de projetos interativos.
+A empresa AWXS é um novo cliente da JWC, uma empresa especializada em desenvolvimento de soluções personalizadas. Após o sucesso da primeira fase do jogo "Número Secreto" durante a Aula 01, a JWC está em fase probatória para demonstrar sua competência no desenvolvimento de projetos interativos.
 
-Agora é o momento de avançar para a Fase 3 do jogo, implementando novos desafios e funcionalidades que tornarão o jogo ainda mais interessante. Para isso, o cliente solicitou a adição de que os numeros secretos sejam criados aleatoriamente(random) e que o numero secreto esteja limitado ao intervalo entre 10-100 caso usuário digite um numero menor que 10 ou maior que 100 o jogo deve obrigar o mesmo a digitar novamente um valor entre 10 e 100.
+Agora é o momento de avançar para a Fase 2 do jogo, implementando novos desafios e funcionalidades que tornarão o jogo ainda mais interessante. Para isso, o cliente solicitou a adição de um sistema de níveis de dificuldade e um sistema de pontuação que premia a precisão dos jogadores.
 
-Objetivos da Fase 3:
-Pesquisar pela função random
-Inplementar o randem com intervalo de 10 - 100
-Configurar uma estrutura de decisão que nãp permita o jogo continuar caso o usuário tenha figitado um valor abaixo de 10 ou acima de 100 (implemente dentro do if o continue)
-Entrega:
-Anexar o código com as melhorias da fase 3 aqui
+Objetivos da Fase 2:
+Implementar o sistema de níveis de dificuldade:
+
+Fácil: O jogador tem 30 tentativas para adivinhar o número secreto.
+Médio: O jogador tem 15 tentativas para adivinhar o número secreto.
+Difícil: O jogador tem 5 tentativas para adivinhar o número secreto.
+Implementar o sistema de pontuação:
+
+O jogador começa com uma pontuação inicial de 100 pontos.
+A cada tentativa errada, o jogador perde pontos.
+O cálculo da pontuação perdida pode ser adaptado ao nível de dificuldade. Por exemplo:
+Fácil: Perde 10 pontos por erro.
+Médio: Perde 20 pontos por erro.
+Difícil: Perde 50 pontos por erro.
+Garantir que o jogador seja informado sobre sua pontuação e tentativas restantes após cada tentativa.
 
 '''
 import random
@@ -47,7 +56,7 @@ while contador <= level or ponto_total <= ponto:
         
         if numero_escolhido < min or numero_escolhido > max:
             print(f'Você escolheu um númeto fora do intervalo de 10 a 100! Tentativa {contador} de {level}.\n')
-            contador += 1
+            #contador += 1
             ponto += ponto
             print(f'Você perdeu {ponto} de {ponto_total}')
 
@@ -67,7 +76,7 @@ while contador <= level or ponto_total <= ponto:
             print(f'Parabéns você acertou! O número escolhido {numero_escolhido} é igual ao número secreto {numero_secreto}.')
             break
 
-        if contador == level or ponto_total == ponto:
+        if contador == level or ponto_total == ponto or ponto > ponto_total:
             contador += 1
             print('\nVocê excedeu o limite de tentativas. Game Over!\n')
             ponto += ponto
