@@ -19,6 +19,7 @@ min = 10
 max = 100
 contador = 0
 level = 0
+ponto_total = 100
 
 while True:
 
@@ -26,35 +27,49 @@ while True:
 
     if level_escolhido == 1:
         level = 30
+        ponto = 10
         break        
     elif level_escolhido == 2:
         level = 15
+        ponto = 20
         break        
     elif level_escolhido == 3:
         level = 5
+        ponto = 50
         break       
     else:
         print("Opção inválida! Por favor, escolha um dos números disponíveis.\n")
         
 
-while contador <= level:
+while contador <= level or ponto_total <= ponto:
         
         numero_escolhido = int(input('\nDigite o numero secreto entre 10 e 100: '))
         
         if numero_escolhido < min or numero_escolhido > max:
             print(f'Você escolheu um númeto fora do intervalo de 10 a 100! Tentativa {contador} de {level}.\n')
+            contador += 1
+            ponto += ponto
+            print(f'Você perdeu {ponto} de {ponto_total}')
 
         elif numero_secreto > numero_escolhido:
             print(f'O número secreto é maior que {numero_escolhido}! Tentativa {contador} de {level}.\n')
-        
+            contador += 1
+            ponto += ponto
+            print(f'Você perdeu {ponto} de {ponto_total}')
+
         elif numero_secreto < numero_escolhido:
             print(f'O número secreto é menor que {numero_escolhido}! Tentativa {contador} de {level}.\n')
-
+            contador += 1
+            ponto += ponto
+            print(f'Você perdeu {ponto} de {ponto_total}')
+            
         else:
             print(f'Parabéns você acertou! O número escolhido {numero_escolhido} é igual ao número secreto {numero_secreto}.')
             break
 
-        if contador == level:
+        if contador == level or ponto_total == ponto:
             contador += 1
             print('\nVocê excedeu o limite de tentativas. Game Over!\n')
+            ponto += ponto
+            print('\nVocê excedeu os pontos. Game Over!\n')
             break
